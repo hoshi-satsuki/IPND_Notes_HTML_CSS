@@ -1,0 +1,379 @@
+
+
+<!-- This is an HTML comment. Comments allow you to communicate with other programmers using
+text that will be ignored by the computer! -->
+<!DOCTYPE HTML> <!-- The DOCTYPE tells the browser what kind of document this is (HTML) -->
+<html lang="en">
+  <head><!-- The head tag includes important information about the page -->
+      <meta charset="UTF-8"> <!-- This line defines something called "character encoding"
+      This will allow the browser to display certain characters (such as non-Roman letters) correctly.
+      You should include this line in the head of all of your webpages. -->
+      <title>My Notes</title> <!-- This is the title of your page (what appears in the name of a browser tab) -->
+      <!--<link rel="stylesheet" href="style.css">  This line links your CSS stylesheet to your HTML (see Lesson 1.3) -->
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>An Introduction to HTML</h1>
+    <div class="document">
+    <div class="Table">
+      <ol type="1" class="TOC">
+        <li><a href="#Intro">Introduction</a>
+          <ol type="i">
+            <li><a href="#TWWW">The World Wide Web</a></li>
+            <li><a href="#AWP">Web Pages</a></li>
+          </ol>
+        </li>
+        <li><a href="#Hyper">HTML - Hypertext Markup Language</a>
+          <ol type="i">
+              <li><a href="#HTA">HTML - Tags and Attributes</a></li>
+              <li><a href="#IBT">Inline vs Block Elements</a></li>
+              <li><a href="#CE">Container Elements</a></li>
+              <li><a href="#BaG">Boxes and Grids</a></li>
+              <li><a href="#DS">Document Structure</a></li>
+              <li><a href="#Mis">Miscellania</a></li>
+          </ol>
+        </li>
+        <li><a href="#CSS">CSS - Cascading Style Sheets</a>
+          <ol type="i">
+              <li><a href="#CSSIntro">Introduction</a></li>
+              <li><a href="#CSSSynt">Syntax</a></li>
+              <li><a href="#TBR">The Box Revisited</a></li>
+              <li><a href="#PoB">Positioning Boxes</a></li>
+          </ol>
+        </li>
+        <li><a href="#DevT">Developer Tools</a>
+        </li>
+        <li><a href="#PfP">Philosophy for Programmers </a>
+          <ol type="i">
+              <li><a href="#CaS">Computers are Stupid</a></li>
+              <li><a href="#IOF">It's OK to Forget</a></li>
+              <li><a href="#SC">Structuring Code</a></li>
+              <li><a href="#DRY">Don't Repeat Yourself</a></li>
+              <li><a href="#STL">Some Thoughts on Learning</a></li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <div class="Cont">
+      <ol type="1" class="Numbers_h2">
+        <li>
+          <div id="Intro">
+            <h2>Introduction</h2>
+            <ol type="i" class="Numbers_h3">
+              <li>
+                <div id="TWWW">
+                  <h3>The World Wide Web</h3>
+                  <div class="mytext">
+                     The world wide web can be modeled using three
+                     major pieces:
+                     There is you and your browser, there is the internet and
+                     there are servers. Whenever you want to access a webpage
+                     your browser makes requests to a server via the internet
+                     using a protocol called <em>http</em>. The server responds with
+                     files that the browser displays on your computer.
+                     Those files are coded in
+                     <em>HTML (Hyper Text Markup Language)</em>
+                     among other languages. <em>Hyperlinks</em> allow you to move
+                     from one webpage to another, thus making the whole thing weblike.
+                     The number of webpages existing is somewhere on the order of 30
+                     billion.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="AWP">
+                  <h3>Web Pages</h3>
+                  <div class="mytext">
+                    On this page we are going to focus on how web pages are coded.
+                    One can basically think of a web page as a house, then there is
+                    <ul>
+                      <li>HTML, which describes the structure of the house, like "Where are the
+                          walls?" or "Which room is the living room?",</li>
+                      <li>CSS, which describes the style of the house, like "Are there any curtains?" or
+                          "Which colour is that wall?",</li>
+                      <li>Java Script, which describes the interactive elements, like "Open a door!",</li>
+                      <li>rules, like "A TV cannot float in a room." and</li>
+                      <li>tools, like "You need a hammer to build a wall."</li>
+                    </ul>
+                    This text is going to give an introduction to HTML and CSS as well as some brief
+                    thoughts on how to learn a programming language.
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          <div id="Hyper">
+            <h2>HTML - Hypertext Markup Language</h2>
+            <div class="mytext">
+              HTML files define the structure of a web page. This structure is tree like, meaning it
+              is a structure that has branches. The <em>DOM - Document Object Model</em> is the convention for the
+              browser for representing and interacting with elements in HTML. An element is the most
+              basic structure in HTML and is represented through tags. Elements can be empty, contain text
+              or contain other elements. Each tag has a type, which defines what kind of element will be created
+              by the browser, e.g. a paragraph or an image. Tags can also have attributes describing them.
+              In order to give your web page styles you will use a different language called CSS, which
+              will be described later in the text.
+            </div>
+            <ol type="i" class="Numbers_h3">
+              <li>
+                <div id="HTA">
+                  <h3>HTML - Tags and Attributes</h3>
+                  <div class="mytext">
+                      An HTML <em>element</em> basically consists of tags and contents:
+                      <div class="Stag">&lt; NAME &gt; <span class="Scontent">Contents</span> &lt; /NAME&gt;</div>
+                      The first red part is called an <em>opening tag</em>,
+                      the second one a <em>closing tag</em>. The contents
+                      are inbetween the tags. However, there are tags that do not
+                      contain any contents, these are called <em>void tags</em>.
+                      <em>Void tags</em> do not have <em>closing tags</em> either. Some examples are
+                      <ul>
+                        <li><span class="Stag">&lt;b&gt; <span class="Scontent">Contents</span> &lt;/b&gt;</span> - <span class="Scontent">Contents</span> will be bold</li>
+                        <li><span class="Stag">&lt;em&gt; <span class="Scontent">Contents</span> &lt;/em&gt;</span> - <span class="Scontent">Contents</span> will be in italics (emphasized)</li>
+                        <li><span class="Stag">&lt;br&gt;</span> - creates a new line (This is an example of a void tag)</li>
+                        <li><span class="Stag">&lt;em&gt; <span class="Scontent">Contents</span> &lt;/em&gt;</span> - <span class="Scontent">Contents</span> will be contained in one paragraph</li>
+                      </ul>
+                      <br>
+                      Some tags have <em>attributes</em>:
+                      <div class="Stag">&lt; TAG ATTR=&quot; value&quot; &gt; <span class="Scontent">Contents</span> &lt; /TAG&gt;</div>
+                      Examples include
+                      <ul>
+                        <li><span class="Stag">&lt;a href=&quot;www.reddit.com&quot;&gt; <span class="Scontent">Contents</span> &lt;/a&gt;</span> - the <em>anchor-tag</em>, which is used for hyperlinks </li>
+                        <li><span class="Stag">&lt;img src=&quot;url&quot; alt=&quot;text&quot;&gt; <span class="Scontent">Contents</span> &lt;/img&gt;</span> - the <em>image-tag</em>, which is used to for images,  <span class="Stag">&quot;text&quot;</span> is displayed in case of broken requests and is also useful for blind people </li>
+                      </ul>
+
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="IBT">
+                  <h3>Inline vs Block Tags</h3>
+                  <div class="mytext">
+                    Tags like <span class="Stag">&lt;b&gt;</span> , <span class="Stag">&lt;em&gt;</span> , <span class="Stag">&lt;img&gt;</span>  and <span class="Stag">&lt;br&gt;</span>  are called <em>inline</em>, which basically means that the contents if present stay within the same line.
+                    <span class="Stag">&lt;p&gt;</span>  is an example of a <em>block tag</em>.  <em>Block tags</em> create some sort of an invisible box around the contents, there will be more detail on that later.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="CE">
+                  <h3>Container Elements</h3>
+                  <div class="mytext">
+                    <em>Container elements</em> are elements that do nothing but contain stuff inside them. Two of them are <span class="Stag">&lt;span&gt;<span class="Scontent">text</span>&lt;/span&gt;</span>, which is inline and
+                       <span class="Stag">&lt;div&gt;<span class="Scontent">text</span>&lt;/div&gt;</span>, which is a block tag.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="BaG">
+                  <h3>Boxes and Grids</h3>
+                  <div class="mytext">
+                    The background of a web page is basicly a grid in which the elements are arranged as boxes, that can have
+                    sub-boxes and so on. So the first box
+                    is the web page itself. The <span class="Stag">&lt;div&gt;<span class="Scontent">text</span>&lt;/div&gt;</span>
+                    tag defines a box. As later you will want to add style to your boxes you have to label the boxes. That is where
+                    the <em>class</em>- attribute comes in, e.g.
+                    <span class="Stag">&lt;div class="something"&gt;<span class="Scontent">text</span>&lt;/div&gt;</span>.
+                    Boxes can have several labels as they can belong to multiple classes.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="DS">
+                  <h3>Document Structure</h3>
+                  <div class="mytext">
+                    HTML-documents possess a certain kind of document structure which looks somewhat like this:
+                    <div class="image"><img src="images/HTMLStruct.png" alt="Screenshot"></div>
+                    The head contains metadata, whereas the body contains the actual contents. Up to now we have been focussing on the body only.
+
+                 </div>
+               </div>
+             </li>
+              <li>
+                <div id="Mis">
+                  <h3>Miscellania</h3>
+                  <div class="mytext">
+                    <h4>Whitespaces</h4>
+                    In HTML all whitespaces or sequences of whitespaces turn into a single space.
+                    <h4>Escape Codes</h4>
+                    Sometimes in a text you will want to write something like &quot;&lt; b &gt;&quot; instead of of having those
+                    characters be interpreted as HTML code. That is where <em>escape codes</em> come in. This example would
+                    be written as &quot;&amp;lt; b &amp;gt;&quot;.
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+        <li>
+          <div id="CSS">
+            <h2>CSS - Cascading Style Sheets</h2>
+            <ol type="i" class="Numbers_h3">
+              <li>
+                <div id="CSSIntro">
+                  <h3>Introduction</h3>
+                  <div class="mytext">
+                    <em>Cascading Style Sheets</em> let you add style to your web page, that is they
+                    let you control how your web page is going to look through socalled <em>rules</em>. <em>Cascading</em>
+                    means that you go down and down with all the rules for an element until you find the most
+                    specific rule which then gets applied.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="CSSSynt">
+                  <h3>Syntax</h3>
+                  <div class="mytext">
+                    There are several ways to add CSS to your HTML, this text will focus on linking the CSS-file
+                    to your HTML document, which is achieved by adding a line like
+                    <div class="image"><img src="images/CSSlink.png" alt="Screenshot"></div>
+                    in the head-section of the HTML file.<br>
+                    The CSS-file then looks something like this:
+                    <div class="container">
+                      <div class="image2"><img src="images/CSSEx.png" alt="Screenshot"></div>
+                      <div class="mytext">
+                        You select the element you want to add style to by using a socalled <em>selector</em>. This can
+                        be an HTML-tag (e.g. a p-tag) or a class (e.g. sand). Then you assign <em>values</em> to <em>properties</em>
+                        by writing <span class="Scontent"> property:value</span>.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="TBR">
+                  <h3>The Box Revisited</h3>
+                  <div class="mytext">
+                    As mentioned above everything on a web page is a box.
+                    <div class="container">
+                      <div class="image2"><img src="images/BoxModel.png" alt="Screenshot"></div>
+                      <div class="mytext">
+                        A box consists of a <em>margin</em>, a <em>border</em>, a <em>padding</em> and the <em>content</em>, each
+                        one containing the other. The <em>content</em> is the image or the text you want to be displayed. The <em>padding</em> clears out an area around the content and is affected
+                        by the background color of the box. The <em>border</em> surrounds the padding and the <em>margin</em> clears up an area around the border, is essentially trasparent
+                        and defines the space between the boxes.
+                      </div>
+                    </div>
+                    By default the size of a box is calculated as "border+padding+content", but there is an easier
+                    to use model available, which allows you to enter the size of the box that then stays fixed when tweaking the border and
+                    the padding. You can use this model by setting <span class="Scontent"> box-sizing:border-box</span> in your CSS-file.
+                    <div class="container">
+                      <div class="mytext">As this option is fairly new you have to enter some browser specific prefixes, so here is what you have to type:
+                      </div>
+                      <div class="image3"><img src="images/BorderBox.png" alt="Screenshot"></div>
+                    </div>
+                    You can also choose whether you want to define the size of the box in pixels or as a percentage, the latter resulting
+                    in the box being scaled when the browser is scaled. You can also set a maximum width (property <span class="Scontent">max-width</span>), so that
+                    the box will resize and become smaller when neccesary but will not get larger than that number.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="PoB">
+                  <h3>Positioning Boxes</h3>
+                  <div class="mytext">
+                    As a block element a <span class="Stag">div</span>-box will by default use up the whole of the width of
+                    the page. Adding the style <span class="Scontent">display:flex</span> will override this behaviour and let
+                    you put several boxes on one line.
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+
+        <li>
+          <div id="DevT">
+            <h2>Developer Tools</h2>
+            <div class="mytext">
+              Browsers such as Firefox or Chrome offer socalled <em>developer tools</em> to visualize
+              the structure of a web page.
+              <div class="container">
+                <div class="image2"><img src="images/DevTools.png" alt="Screenshot"></div>
+                <div class="mytext">
+                  Sideways triangles symbolize elements and can be expanded to show the contents. Hovering over an
+                  element with the mouse leads to the according part of the page being highlighted. You can also use those tools to display the styles of a page.
+                </div>
+              </div>
+              <br>
+              Finally two useful links should be mentioned, which you can use to validate your HTML or CSS:<br>
+              <ul>
+                <li><a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a>,</li>
+                <li><a href="http://jigsaw.w3.org/css-validator/#validate_by_input">http://jigsaw.w3.org/css-validator/#validate_by_input</a>.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div id="PfP">
+            <h2>Philosophy for Programmers</h2>
+            <ol type="i" class="Numbers_h3">
+              <li>
+                <div id="CaS">
+                  <h3>Computers are Stupid</h3>
+                  <div class="mytext">
+                    In spoken languages even grammatically correct sentences
+                    can contain some sort of <em>ambiguity</em>. Humans usually
+                    infer the correct meaning by looking at the context. In
+                    contrast to humans computers interpret code literally.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="IOF">
+                  <h3>It's OK to Forget</h3>
+                  <div class="mytext">
+                    In programming the key is to understand the big ideas.
+                    It does not matter if you do not know each and every command,
+                    instead it is important to understand the concepts and
+                    to know where to find the things you need.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="SC">
+                  <h3>Structuring Code</h3>
+                  <div class="mytext">
+                    In order to keep your code readable it is important to give
+                    it a certain structure, this is where indenting comes in.
+                    Remember, it is not only the machine that has
+                    to &quot;understand&quot; your code, a colleage or maybe even
+                    yourself half a year later might want to read your code too.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="DRY">
+                  <h3>Don't Repeat Yourself</h3>
+                  <div class="mytext">
+                    The idea is to reuse code as you go along programming. I.e. you can use
+                    the same style several times while only defining it once.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div id="STL">
+                  <h3>Some Thoughts on Learning</h3>
+                  <div class="mytext">
+                    One can model a learning process using four steps
+                    <ul>
+                      <li>Ignorance</li>
+                      <li>Awareness</li>
+                      <li>Ability</li>
+                      <li>Fluency</li>
+                    </ul>
+                    While getting from ignorance to awareness and to ability takes
+                    only a rather short time it can take ages to actually achieve
+                    fluency.
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+  </body>
+</html>

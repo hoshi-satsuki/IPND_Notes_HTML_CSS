@@ -1,0 +1,115 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:"Arial",sans-serif;
+    background-color:powderblue;
+}
+
+html, body { height: 90%; width: 100%; margin: 0; }
+
+img{
+    max-width:100%;
+}
+
+h1{
+    text-align:center;
+    font-size: 30px;
+    text-shadow: 2px 1px grey;
+}
+
+h2{
+   font-size:20px;
+   text-shadow: 1px .5px grey;
+}
+
+h3{
+   font-size:16px;
+   text-shadow:.8px .4px grey;
+}
+
+/*is same as h2 - numbers and titles should be same size*/
+.Numbers_h2{
+  font-size:20px;
+  font-weight:bold;
+  text-shadow: 1px .5px grey;
+}
+
+.Numbers_h3{
+  font-size:16px;
+  font-weight:bold;
+  text-shadow:.8px .4px grey;
+}
+
+
+
+
+.document{
+  display: -webkit-flex;
+  display: flex;
+  justify-content:center;
+  height:95%;
+
+}
+
+.Table{
+  width:25%;
+  max-width: 500px;
+  margin:1%;
+}
+.Cont{
+  width:65%;
+  height:95%;
+  max-width: 600px;
+  overflow-y: scroll;
+  padding-right:5%;
+  margin:1%
+}
+
+
+.container{
+  display: -webkit-flex;
+  display: flex;
+}
+
+.image2{
+  max-width:40%;
+  margin-right:5%;
+}
+.image3{
+  max-width:50%;
+  margin-left:5%;
+}
+
+
+.image{
+  max-width:90%;
+}
+
+.TOC{
+  font-size:16px;
+
+}
+
+
+.mytext{
+  font-size:12px;
+  text-align: justify;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+
+
+
+.Stag{
+  color:red;
+}
+
+.Scontent{
+  color:green;
+}
